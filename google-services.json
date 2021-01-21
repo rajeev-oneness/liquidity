@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "749520376735",
+    "firebase_url": "https://howmdev-app.firebaseio.com",
+    "project_id": "howmdev-app",
+    "storage_bucket": "howmdev-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749520376735:android:f301c2d114a878f003e3aa",
+        "android_client_info": {
+          "package_name": "com.app.howmdevapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749520376735-dup8h340ua5qc0gp8j41hcag3b95q3u3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.howmdevapp",
+            "certificate_hash": "889db21553f996f9d2e88716fff184abded19033"
+          }
+        },
+        {
+          "client_id": "749520376735-c3ageas36pfusugbiod84gdc5l61jv5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCezWLWWTQ5sI6TLIHobQQ4yZdJB-pavgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749520376735-c3ageas36pfusugbiod84gdc5l61jv5r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "749520376735-29ta87er5vmjn49d37auild0pcaf2nac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.howmdevapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

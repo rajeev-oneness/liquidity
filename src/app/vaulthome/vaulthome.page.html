@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <!-- <ion-title>SELECTED LOCATION</ion-title> -->
+      <ion-label>SELECTED LOCATION</ion-label>
+      <ion-item>
+		  <ion-select value="kolkata">
+		    <ion-select-option selected value="kolkata">kolkata</ion-select-option>
+		    <ion-select-option value="mumbai">mumbai</ion-select-option>
+		    <ion-select-option value="bangalore">bangalore</ion-select-option>
+		    <ion-select-option value="delhi">delhi</ion-select-option>
+		  </ion-select>
+		</ion-item>
+		<ion-icon slot="end" class="search_item" name="search-outline"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+	<div class="vaultlogo_wrap">
+		<img src="assets/vault-logo.png">
+		<p>Through <b>Liquidity Vault</b>, reserve your favorite brands at a special price and redeem your reserved product  across the outlets in the category of your choice. </p>
+	</div>
+	<div class="form_wrap">
+		<ion-button class="btn-submit" expand="block" shape="round" routerLink="" routerDirection="forward">CATEGORY AND OUTLETS</ion-button>
+		<ion-button class="btn-submit" expand="block" shape="round" routerLink="/otpverification" routerDirection="forward">RESERVE AT VAULT</ion-button>
+		<ion-button class="btn-submit" expand="block" shape="round" routerLink="/otpverification" routerDirection="forward">REDEEM AND BALANCE</ion-button>
+		<ion-button class="btn-submit" expand="block" shape="round" routerLink="/otpverification" routerDirection="forward">ORDER HISTORY</ion-button>
+		<ion-button class="btn-submit" expand="block" shape="round" routerLink="/otpverification" routerDirection="forward">FAQ</ion-button>
+	</div>
+</ion-content>

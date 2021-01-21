@@ -1,0 +1,155 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <!-- <ion-title>SELECTED LOCATION</ion-title> -->
+      <ion-label>SELECTED LOCATION</ion-label>
+      <ion-item>
+		  <ion-select value="kolkata">
+		    <ion-select-option selected value="kolkata">kolkata</ion-select-option>
+		    <ion-select-option value="mumbai">mumbai</ion-select-option>
+		    <ion-select-option value="bangalore">bangalore</ion-select-option>
+		    <ion-select-option value="delhi">delhi</ion-select-option>
+		  </ion-select>
+		</ion-item>
+		<!-- <ion-icon slot="end" class="search_item" name="search-outline"></ion-icon> -->
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+	<div class="title_bar">
+		<h2 class="title">restaurants delivery</h2>
+	</div>
+	<div class="slide_item">
+		<ion-slides pager="false" [options]="slideOpts">
+
+	        <ion-slide *ngFor="let item of all_liquor_shop" (click)="gotoshopproduct(item.id)">
+	          <div class="slide_box">
+	          	<span class="rating">3.4</span>
+	            <div class="img_wrap" style="background: url({{item.image}}) no-repeat center; background-size: cover;"></div>
+	            <div class="box_content">
+	            	<h2>{{item.liquorShopName}}</h2>
+		            <p>{{item.liquorLocation}}</p>
+	            </div>
+	          </div>
+	        </ion-slide>
+
+	        <!-- <ion-slide>
+	          <div class="slide_box">
+	          	<span class="rating">3.4</span>
+	            <div class="img_wrap"style="background: url(assets/img-2.png) no-repeat center; background-size: cover;"></div>
+	            <div class="box_content">
+	            	<h2>Orko’ss Restaurant</h2>
+		            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+	            </div>
+	          </div>
+	        </ion-slide>
+
+	        <ion-slide>
+	          <div class="slide_box">
+	          	<span class="rating">3.4</span>
+	            <div class="img_wrap"style="background: url(assets/img-1.png) no-repeat center; background-size: cover;"></div>
+	            <div class="box_content">
+	            	<h2>Orko’ss Restaurant</h2>
+		            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+	            </div>
+	          </div>
+	        </ion-slide>
+
+	        <ion-slide>
+	          <div class="slide_box">
+	          	<span class="rating">3.4</span>
+	            <div class="img_wrap"style="background: url(assets/img-2.png) no-repeat center; background-size: cover;"></div>
+	            <div class="box_content">
+	            	<h2>Orko’ss Restaurant</h2>
+		            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+	            </div>
+	          </div>
+	        </ion-slide> -->
+
+      	</ion-slides>	
+	</div>
+	<div class="title_bar">
+		<h2 class="title">All restaurants</h2>
+	</div>
+	<div class="slide_item slide_item--mod">
+		<ion-row class="ion-no-padding">
+		    <ion-col size="4" class="ion-no-padding" *ngFor="let item of all_liquor_shop">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url({{item.image}}) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>{{item.liquorShopName}}</h2>
+			            <p>{{item.liquorLocation}}</p>
+		            </div>
+		        </div>
+		    </ion-col>
+<!-- 		    <ion-col size="4" class="ion-no-padding">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url(assets/img-2.png) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>Orko’ss Restaurant</h2>
+			            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+		            </div>
+		        </div>
+		    </ion-col>
+		    <ion-col size="4" class="ion-no-padding">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url(assets/img-3.png) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>Orko’ss Restaurant</h2>
+			            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+		            </div>
+		        </div>
+		    </ion-col>
+		    <ion-col size="4" class="ion-no-padding">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url(assets/img-1.png) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>Orko’ss Restaurant</h2>
+			            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+		            </div>
+		        </div>
+		    </ion-col>
+		    <ion-col size="4" class="ion-no-padding">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url(assets/img-2.png) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>Orko’ss Restaurant</h2>
+			            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+		            </div>
+		        </div>
+		    </ion-col>
+		    <ion-col size="4" class="ion-no-padding">
+		    	<div class="slide_box">
+		          	<span class="rating">3.4</span>
+		            <div class="img_wrap" style="background: url(assets/img-3.png) no-repeat center; background-size: cover;"></div>
+		            <div class="box_content">
+		            	<h2>Orko’ss Restaurant</h2>
+			            <p>E Block, 306, 307, Level 3, Kolkata, West Bengal-700064</p>
+		            </div>
+		        </div>
+		    </ion-col> -->
+		</ion-row>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="footer_content">
+  	<div class="footer_item_start">
+  		<img src="assets/search.png">
+  		<p>Search</p>
+  	</div>
+  	<div class="footer_item_end mw_230">
+  		<img src="assets/cart.png">
+  		<p>CART</p>
+  		<img src="assets/arrow-right.png">
+  	</div>
+  </div>
+</ion-footer>
+

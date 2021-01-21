@@ -1,0 +1,18 @@
+<ion-content padding>
+	<div class="logo_wrap">
+		<img src="../../assets/logo.png">
+	</div>
+	<div class="form_wrap">
+		<ion-input type="text" placeholder="Full Name" [(ngModel)]="name"></ion-input>
+		<ion-input type="Number" placeholder="Your Mobile Number"  [(ngModel)]="mobile"></ion-input>
+		<ion-input type="email" placeholder="Email Address" [(ngModel)]="mail"></ion-input>
+		<ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+		<ion-input type="password" placeholder="Confirm Password"></ion-input>
+		<p class="terms">By Signing up you agree to our <span>Terms of Use</span> & <span>Privacy Policy</span>.</p>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>I confirm, I have reached the eligible age as per State laws for purchase & consumption of alcoholic beverages.</ion-label>
+		<ion-button class="btn-submit" expand="block" shape="round" (click)="submitValues()">SIGN UP</ion-button>
+		<p class="sign_in">Have an account? <span routerLink="/login" routerDirection="forward">Sign In</span></p>
+
+	</div>
+</ion-content>

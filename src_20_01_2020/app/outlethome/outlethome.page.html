@@ -1,0 +1,779 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <!-- <ion-title>SELECTED LOCATION</ion-title> -->
+      <ion-label>SELECTED LOCATION</ion-label>
+      <ion-item>
+		  <ion-select value="kolkata">
+		    <ion-select-option selected value="kolkata">kolkata</ion-select-option>
+		    <ion-select-option value="mumbai">mumbai</ion-select-option>
+		    <ion-select-option value="bangalore">bangalore</ion-select-option>
+		    <ion-select-option value="delhi">delhi</ion-select-option>
+		  </ion-select>
+		</ion-item>
+		<ion-icon slot="end" class="search_item" name="search-outline"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div>
+	  <ion-segment [(ngModel)]="drinks" scrollable="true">
+	    <ion-segment-button value="liquor">
+	      LIQUOR
+	    </ion-segment-button>
+	    <ion-segment-button value="food">
+	      FOOD
+	    </ion-segment-button>
+	    <ion-segment-button value="soft-beverage">
+	      SOFT BEVERAGE
+	    </ion-segment-button>
+	    <ion-segment-button value="combo">
+	      COMBO
+	    </ion-segment-button>
+	  </ion-segment>
+	</div>
+
+	<div [ngSwitch]="drinks">
+	  <ion-list *ngSwitchCase="'liquor'" class="segment_2">
+	    <div padding>
+		  <ion-segment [(ngModel)]="scotch">
+		    <ion-segment-button value="premium-scotch">
+		      <img src="assets/img-5.png">
+		      <ion-button class="" shape="round">Premium Scotch</ion-button>
+		    </ion-segment-button>
+		    <ion-segment-button value="regular-scotch">
+		      <img src="assets/img-6.png">
+		      <ion-button class="" shape="round">Regular Scotch</ion-button>
+		    </ion-segment-button>
+		    <ion-segment-button value="scotch-whisky">
+		      <img src="assets/img-7.png">
+		      <ion-button class="" shape="round">Scotch Whisky</ion-button>
+		    </ion-segment-button>
+		  </ion-segment>
+		</div>
+
+		<div [ngSwitch]="scotch">
+		  <ion-list *ngSwitchCase="'premium-scotch'" class="drink_items">
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod-2">
+				      	<img src="assets/stock-out.png">
+				      	<!-- <span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span> -->
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		  </ion-list>
+
+		  <ion-list *ngSwitchCase="'regular-scotch'">
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod-2">
+				      	<img src="assets/stock-out.png">
+				      	<!-- <span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span> -->
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		  </ion-list>
+		  <ion-list *ngSwitchCase="'scotch-whisky'">
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod-2">
+				      	<img src="assets/stock-out.png">
+				      	<!-- <span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span> -->
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		    <ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3>J.W. Black Label</h3>
+		    				<ul>
+		    					<li>HIGH: <span class="price_hike">₹ 515.00<img src="assets/green-arrow.png"></span></li>
+		    					<li>HIGH: <span class="price_down">₹ 515.00<img src="assets/red-arrow.png"></span></li>
+		    					<li>NOW: <span class="price_now">₹ 315.00</span></li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="1" class="ion-no-padding">
+				      <img src="assets/copy.png" style="padding-top: 5px;">
+				    </ion-col>
+				  </ion-row>
+		      </ion-grid>
+		    </ion-item>
+		  </ion-list>
+		</div>
+	  </ion-list>
+
+
+
+	  <ion-list *ngSwitchCase="'food'" class="ion-no-padding">
+	    <div class="title_bar">
+			<h2 class="title">Starter</h2>
+		</div>
+		<div class="drink_items">
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content non-veg">
+		    				<h3 class="no-margin">Cheese Chicken Balls</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Roundels of masala cheese, crumb fried, goes with spicy tomato salsa.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+		</div>
+		<div class="title_bar">
+			<h2 class="title">rice AND Biryani</h2>
+		</div>
+		<div class="drink_items">
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content non-veg">
+		    				<h3 class="no-margin">Cheese Chicken Balls</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Roundels of masala cheese, crumb fried, goes with spicy tomato salsa.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+		</div>
+	  </ion-list>
+	  <ion-list *ngSwitchCase="'soft-beverage'" class="ion-no-padding">
+	    <div class="title_bar">
+			<h2 class="title">Starter</h2>
+		</div>
+		<div class="drink_items">
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content non-veg">
+		    				<h3 class="no-margin">Cheese Chicken Balls</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Roundels of masala cheese, crumb fried, goes with spicy tomato salsa.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+		</div>
+		<div class="title_bar">
+			<h2 class="title">Starter</h2>
+		</div>
+		<div class="drink_items">
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content veg">
+		    				<!-- <img src="assets/veg.png"> -->
+		    				<h3 class="no-margin">Paneer Multani Tikka</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Good old classical paneer tikka with a new makeover.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity quantity--mod">
+				      	<p>add</p>
+				      	<span class="plus">+</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+			<ion-item>
+		      <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="9" class="pl-0">
+		    			<div class="drink_content non-veg">
+		    				<h3 class="no-margin">Cheese Chicken Balls</h3>
+		    				<p class="net">₹ 265</p>
+		    				<ul>
+		    					<li>Roundels of masala cheese, crumb fried, goes with spicy tomato salsa.</li>
+		    				</ul>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="3">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				</ion-row>
+		      </ion-grid>
+			</ion-item>
+		</div>
+	  </ion-list>
+	  <ion-list *ngSwitchCase="'combo'">
+	    <ion-item>
+	      <ion-thumbnail item-start>
+	        <img src="img/thumbnail-kitten-1.jpg">
+	      </ion-thumbnail>
+	      <h2>Luna</h2>
+	    </ion-item>
+	    ...
+	  </ion-list>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="footer_content">
+  	<div class="footer_item_start">
+  		<img src="assets/cart.png">
+  		<div class="item_total">
+  			<p><small>1 ITEM IN CART</small></p>
+  			<p class="price_end">₹ 620.00</p>
+  			<p><small>plus taxes*</small></p>
+  		</div>
+  	</div>
+  	<div class="footer_item_end mw_230">
+  		<p>View Cart</p>
+  		<img src="assets/arrow-right.png">
+  	</div>
+  </div>
+</ion-footer>

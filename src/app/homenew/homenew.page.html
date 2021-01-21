@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>SELECTED LOCATION</ion-title> -->
+    <ion-label>SELECTED LOCATION</ion-label>
+    <ion-item>
+    <ion-select value="kolkata">
+      <ion-select-option selected value="kolkata">kolkata</ion-select-option>
+      <ion-select-option value="mumbai">mumbai</ion-select-option>
+      <ion-select-option value="bangalore">bangalore</ion-select-option>
+      <ion-select-option value="delhi">delhi</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-icon slot="end" class="search_item" name="search-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="banner_wraper">
+  <img src="assets/banner-home.png">
+</div>
+<div class="liquidity_vault_button">
+  <img src="assets/vault.png">
+  <div class="bottom_button">
+    <p>Lorem ipsum dolor sit amet, quas commodo aliquam id sit, eos probo prima molestie cu, partiendo intellegebat an est.</p>
+  </div>
+</div>
+<div class="slide_item slide_item--mod-2">
+  <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of all_liquor_shop" (click)="gotoshopproduct(item.id)">
+            <div class="slide_box" >
+                <span class="rating">3.4</span>
+                <div class="img_wrap" style="background: url({{item.image}}) no-repeat center; background-size: cover;"></div>
+                <div class="box_content">
+                  <h2>{{item.liquorShopName}}</h2>
+                  <p>{{item.liquorLocation}}</p>
+                </div>
+            </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</div>
+<ion-fab vertical="bottom" slot="fixed" side="bottom" horizontal="end">
+    <ion-fab-button><img src="assets/filter.png"></ion-fab-button>
+ </ion-fab>
+</ion-content>

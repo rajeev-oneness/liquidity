@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button icon="arrow-back-outline" defaultHref=""></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Vault Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="title_bar">
+		<h2 class="title">ITEMS (TREND SETTERS)</h2>
+	</div>
+	<div class="drink_items" *ngFor="let item of final_cart_items">
+		<ion-item>
+		    <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="6">
+		    			<div class="drink_content">
+		    				<h3 class="m-0">{{item.liquorName}}</h3>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>{{item.liquorUnit}}</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="2" class="ion-no-padding">
+				      <p class="short_count">x 30ml</p>
+				    </ion-col>
+				</ion-row>
+		    </ion-grid>
+		</ion-item>
+		<!-- <ion-item>
+		    <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="6">
+		    			<div class="drink_content">
+		    				<h3 class="m-0">Black Dog Centenary</h3>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="2" class="ion-no-padding">
+				      <p class="short_count">x 30ml</p>
+				    </ion-col>
+				</ion-row>
+		    </ion-grid>
+		</ion-item>
+		<ion-item>
+		    <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="6">
+		    			<div class="drink_content">
+		    				<h3 class="m-0">Black Dog Centenary</h3>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="4">
+				      <div class="quantity">
+				      	<span class="plus">+</span>
+				      	<p>1</p>
+				      	<span class="minus">-</span>
+				      </div>
+				    </ion-col>
+				    <ion-col size="2" class="ion-no-padding">
+				      <p class="short_count">x 30ml</p>
+				    </ion-col>
+				</ion-row>
+		    </ion-grid>
+		</ion-item>
+		<ion-item>
+		    <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3 class="m-0">Subtotal</h3>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="5" class="ion-no-padding">
+				    	<div class="drink_content">
+				      		<h3 class="m-0 ion-text-right">₹ 32500</h3>
+				      	</div>
+				    </ion-col>
+				</ion-row>
+				<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<p class="short_count ion-text-left">Taxes and charges</p>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="5" class="ion-no-padding">
+				      	<p class="short_count">₹ 50</p>
+				    </ion-col>
+				</ion-row>
+		    </ion-grid>
+		</ion-item>
+		<ion-item>
+		    <ion-grid>
+		      	<ion-row class="ion-align-items-center">
+		    		<ion-col size="7">
+		    			<div class="drink_content">
+		    				<h3 class="m-0">Grand Total</h3>
+		    			</div>
+				    </ion-col>
+				    <ion-col size="5" class="ion-no-padding">
+				    	<div class="drink_content">
+				      		<h3 class="m-0 ion-text-right">₹ 32500</h3>
+				      	</div>
+				    </ion-col>
+				</ion-row>
+		    </ion-grid>
+		</ion-item> -->
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="footer_content">
+  	<div class="footer_item_end mw_230">
+  		<p>Select Payment Method</p>
+  		<img src="assets/arrow-right.png">
+  	</div>
+  </div>
+</ion-footer>

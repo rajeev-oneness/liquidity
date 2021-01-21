@@ -1,0 +1,13 @@
+
+<ion-content padding>
+	<div class="logo_wrap">
+		<img src="../../assets/logo.png">
+	</div>
+	<div class="form_wrap">
+		<p>Locate stores, browse drinks, pay and <br>get it delivered at your Home</p>
+		<ion-input placeholder="Enter Your Mail" [(ngModel)]="usermail"></ion-input>
+		<ion-input placeholder="Enter Your Password" type="password" [(ngModel)]="password"></ion-input>
+		<ion-button class="btn-submit" expand="block" shape="round" routerDirection="forward" (click)="login()">Submit</ion-button>
+		<ion-button class="btn-submit" expand="block" shape="round" routerDirection="forward" (click)="signup()">Sign Up</ion-button>
+	</div>
+</ion-content>

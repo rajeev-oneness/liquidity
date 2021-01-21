@@ -1,0 +1,13 @@
+ion-content {
+	--background: #eceff1;
+
+	ion-searchbar {
+	    padding: 0;
+	    --box-shadow: none;
+	    height: 53px;
+	    background-color: #fff;
+	    --placeholder-color: #808080;
+	    --placeholder-font-weight: 600;
+	    --placeholder-font-size: 13px;
+	}
+}
